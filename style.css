@@ -44,7 +44,7 @@
 }
 
 .card {
-    background-color: gray;
+    background-color: white;
     color: blueviolet;
     font-size: 1.25rem;
     /* font-weight: 700; */
@@ -59,3 +59,12 @@
     font-weight: 700;
 }
 
+button {
+    width: auto;
+    padding: 10px;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 25px;
+    margin: 25px 5px;
+}
