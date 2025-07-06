@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: cadetblue; */
 }
 
 #container {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
+    color: blueviolet;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -35,11 +35,10 @@
 }
 
 :modal {
-    background-color: cornflowerblue;
-    border: 2px solid blueviolet;
+    border: 2px solid royalblue;
     border-radius: 5px;
     padding: 25px;
-    text-align: center;
+    text-align: right;
     margin: 20vh auto;
 }
 
@@ -66,5 +65,54 @@ button {
     background-color: royalblue;
     border: none;
     border-radius: 25px;
-    margin: 25px 5px;
+    margin: 5px;
 }
+
+.delete {
+    background-color: darkred;
+}
+
+form > div {
+    padding: 5px;
+    color: blueviolet;
+}
+
+form > div:first-child {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+label {
+    margin-right: 25px;
+}
+
+input[type="text"],
+input[type="number"] {
+    font-size: 100%;
+    width: 150px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid blue;
+    vertical-align: -2px;
+    color: darkblue;
+}
+
+input[type="checkbox"]::before {
+    content: "■";
+    position: absolute;
+    font-size: 1.2rem;
+    right: -1.px;
+    top: -0.38em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+

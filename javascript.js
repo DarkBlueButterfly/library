@@ -37,7 +37,7 @@ function addBookToLibrary(title, author, pages, read) {
     return newBook;
 }
 
-confirmBtn.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     let addLib = addBookToLibrary(title.value, author.value, pages.value, read.value)
     libraryDisplay(addLib)
@@ -48,7 +48,7 @@ confirmBtn.addEventListener("click", (e) => {
 const mainDiv = document.querySelector("#main");
 
 function libraryDisplay(addLib) {
-    // display on "cards" from arrays
+    // display "cards" from arrays
     const cards = document.createElement("div");
     cards.classList.add("card");
 
