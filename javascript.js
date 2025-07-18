@@ -1,14 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor");
+class Book {
+    constructor (title, author, pages, read) {
+        this.id = crypto.randomUUID();
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
-    this.id = crypto.randomUUID();
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
 }
 
 const title = document.querySelector("#title");
@@ -84,7 +83,7 @@ function libraryDisplay(addLib) {
 
     function removeBook(id) {
         let indexID = myLibrary.findIndex((book) => book.id === id)
-        console.log(`Index is ${id}`) //check
+        // console.log(`Index is ${id}`) //check
         myLibrary.splice(indexID, 1);
     }
 
